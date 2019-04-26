@@ -5,7 +5,7 @@ var keyUp;
 var left_p;
 var right_p;
 
-class Scene_play extends phaser.Scene {
+class Scene_play extends Phaser.Scene {
     
     constructor() {
         super({key: "Scene_play"});
@@ -34,7 +34,7 @@ class Scene_play extends phaser.Scene {
 
         this.physics.add.collider(this.ball, this.left_p, this.strikePallete, null, this);
         this.physics.add.collider(this.ball, this.right_p, this.strikePallete, null, this);
-
+        this.left_p = this.add.sprite(30, center_height, 'left_p');
         // controls
 
         keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
@@ -51,11 +51,12 @@ class Scene_play extends phaser.Scene {
         }
 
         if (keyW.isDown) {
-            this.left_p.setVelocityY(-10, 1);
+            this.left_p.setVelocityY(-100);
             console.log('W');
         }
     
         if (keyS.isDown) {
+            this.left_p.setVelocityY(100);
             console.log('S');
         }
     
@@ -66,7 +67,7 @@ class Scene_play extends phaser.Scene {
         
         if (keyUp.isDown) {
             this.right_p.setVelocityY(0);
-            console.log("Up")
+            console.log("Up");
         }
     }
 

@@ -1,4 +1,4 @@
-class Palletes extends phaser.GameObjects.Sprite {
+class Palletes extends Phaser.GameObjects.Sprite {
 
     constructor(scene, x, y, type) {
         super(scene, x, y, type);
