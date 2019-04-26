@@ -1,4 +1,4 @@
-class Bootloader extends phaser.Scene {
+class Bootloader extends Phaser.Scene {
 
     constructor() {
         super({key: "Bootloader"});

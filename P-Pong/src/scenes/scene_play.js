@@ -5,7 +5,7 @@ var keyUp;
 var left_p;
 var right_p;
 
-class Scene_play extends phaser.Scene {
+class Scene_play extends Phaser.Scene {
     
     constructor() {
         super({key: "Scene_play"});
@@ -18,10 +18,10 @@ class Scene_play extends phaser.Scene {
         this.add.image(center_width, center_height, "separator");
 
         // left pallete
-        this.left_p = this.physics.add.staticImage(30, center_height, "left_p");
+        this.left_p = this.physics.add.image(30, center_height, "left_p").setImmovable(true);
 
         // right pallete
-        this.right_p = this.physics.add.staticImage(this.sys.game.config.width-30, center_height, "right_p");
+        this.right_p = this.physics.add.image(this.sys.game.config.width-30, center_height, "right_p").setImmovable(true);
 
         // ball
         this.physics.world.setBoundsCollision(false, false, true, true);
@@ -50,23 +50,26 @@ class Scene_play extends phaser.Scene {
             this.ball.setPosition(this.sys.game.config.width/2, this.sys.game.config.height/2);
         }
 
+        this.left_p.setVelocityY(0);
+        this.right_p.setVelocityY(0);
+
         if (keyW.isDown) {
-            this.left_p.setVelocityY(-10, 1);
+            this.left_p.setVelocityY(-100);
             console.log('W');
         }
     
         if (keyS.isDown) {
-            this.left_p.setVelocityY(10);
+            this.left_p.setVelocityY(100);
             console.log('S');
         }
     
         if (keyDwn.isDown) {
-            this.right_p.setVelocityY(0);
+            this.right_p.setVelocityY(-100);
             console.log('Dwn');
         }
         
         if (keyUp.isDown) {
-            this.right_p.setVelocityY(0);
+            this.right_p.setVelocityY(100);
             console.log("Up")
         }
     }
