@@ -56,7 +56,6 @@ class Scene_play extends phaser.Scene {
         }
     
         if (keyS.isDown) {
-            this.left_p.setVelocityY(10);
             console.log('S');
         }
     
