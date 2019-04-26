@@ -5,7 +5,7 @@ var keyUp;
 var left_p;
 var right_p;
 
-class Scene_play extends Phaser.Scene {
+class Scene_play extends phaser.Scene {
     
     constructor() {
         super({key: "Scene_play"});
