@@ -34,7 +34,6 @@ class Scene_play extends Phaser.Scene {
 
         this.physics.add.collider(this.ball, this.left_p, this.strikePallete, null, this);
         this.physics.add.collider(this.ball, this.right_p, this.strikePallete, null, this);
-        this.left_p = this.add.sprite(30, center_height, 'left_p');
         // controls
 
         keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
@@ -50,8 +49,8 @@ class Scene_play extends Phaser.Scene {
             this.ball.setPosition(this.sys.game.config.width/2, this.sys.game.config.height/2);
         }
 
-        this.left_p.body.setVelocityY(0);
-        this.right_p.body.setVelocityY(0);
+        this.left_p.setVelocityY(0);
+        this.right_p.setVelocityY(0);
 
         if (keyW.isDown) {
             this.left_p.setVelocityY(-100);
