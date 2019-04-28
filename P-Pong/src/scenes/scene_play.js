@@ -34,7 +34,7 @@ class Scene_play extends Phaser.Scene {
 
         this.physics.add.collider(this.ball, this.left_p, this.strikePallete, null, this);
         this.physics.add.collider(this.ball, this.right_p, this.strikePallete, null, this);
-
+        this.left_p = this.add.sprite(30, center_height, 'left_p');
         // controls
 
         keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
