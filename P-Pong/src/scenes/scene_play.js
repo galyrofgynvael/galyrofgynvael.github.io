@@ -53,22 +53,22 @@ class Scene_play extends Phaser.Scene {
         this.right_p.setVelocityY(0);
 
         if (keyW.isDown) {
-            this.left_p.setVelocityY(-100);
+            this.left_p.setVelocityY(-200);
             console.log('W');
         }
     
         if (keyS.isDown) {
-            this.left_p.setVelocityY(100);
+            this.left_p.setVelocityY(200);
             console.log('S');
         }
     
         if (keyDwn.isDown) {
-            this.right_p.setVelocityY(-100);
+            this.right_p.setVelocityY(-200);
             console.log('Dwn');
         }
         
         if (keyUp.isDown) {
-            this.right_p.setVelocityY(100);
+            this.right_p.setVelocityY(200);
             console.log("Up")
         }
     }
