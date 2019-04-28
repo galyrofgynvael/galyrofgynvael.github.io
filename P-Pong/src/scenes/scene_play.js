@@ -28,7 +28,7 @@ class Scene_play extends Phaser.Scene {
         this.ball = this.physics.add.image(center_width, center_height, "ball");
         this.ball.setCollideWorldBounds(true);
         this.ball.setBounce(1);
-        this.ball.setVelocityX(-600);
+        this.ball.setVelocityX(-200);
 
         // physics
 
