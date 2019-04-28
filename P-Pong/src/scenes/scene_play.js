@@ -18,10 +18,10 @@ class Scene_play extends Phaser.Scene {
         this.add.image(center_width, center_height, "separator");
 
         // left pallete
-        this.left_p = this.physics.add.image(30, center_height, "left_p").setImmovable(true);
+        this.left_p = this.physics.add.image(30, center_height, "left_p");
 
         // right pallete
-        this.right_p = this.physics.add.image(this.sys.game.config.width-30, center_height, "right_p").setImmovable(true);
+        this.right_p = this.physics.add.image(this.sys.game.config.width-30, center_height, "right_p");
 
         // ball
         this.physics.world.setBoundsCollision(false, false, true, true);
