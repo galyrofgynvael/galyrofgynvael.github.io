@@ -1,5 +1,5 @@
 var config = {
-    width: 640,
+    width: 1000,
     height: 400,
     parent: "contenedor",
     physics: {
